@@ -58,8 +58,8 @@ CREATE TABLE IF NOT EXISTS itens_pedido (
     INDEX idx_itens_pedido (pedido_id)
 ) ENGINE=InnoDB;
 
--- Acesso inicial do administrador: admin@mercado.com / admin123
--- Troque a senha após o primeiro acesso.
+-- administrador: admin@mercado.com / admin123
+
 INSERT INTO usuarios (nome, email, senha, tipo)
 VALUES ('Administrador', 'admin@mercado.com', '$2y$12$k/QNSufIU6bWKrRgeg/F2.RdPhV.A3e52Hp7BJ2kRkb4/PUuG4XNO', 'admin')
 ON DUPLICATE KEY UPDATE email = VALUES(email);
